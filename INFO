@@ -1,8 +1,8 @@
 {
     "name": "fujirou_lyric_wiki",
-    "displayname": "LyricWiki Complete",
-    "description": "read complete lyric of lyrics.wikia.com",
-    "version": "1.2",
+    "displayname": "Synology Scrobbler",
+    "description": "Gets lyrics and scrobbles",
+    "version": "1.0",
     "site": "http://lyrics.wikia.com/",
     "module": "lyric.php",
     "type": "lyric",
