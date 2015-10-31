@@ -13,7 +13,6 @@ if (!class_exists('md_scrobbler')) {
         require(__DIR__.'/../../include/fujirou_common.php');
     }
 }
-
 // http://api.wikia.com/wiki/LyricWiki_API
 class FujirouLyricWiki {
 	private $apiUrl = 'http://lyrics.wikia.com/api.php';
@@ -26,7 +25,7 @@ class FujirouLyricWiki {
 		 $scrobbler = new md_Scrobbler('USER', 'PASSWORD');
 		 $scrobbler->add($artist, $title, '', 60);
 		 $scrobbler->submit();
-		 return $this->search($info, $artist, $title);
+		return $this->search($info, $artist, $title);
 	}
 	public function getLyrics($id, $info) {
 		return $this->get($info, $id);
@@ -36,7 +35,7 @@ class FujirouLyricWiki {
 		$count = 0;
 
 		$searchUrl = sprintf(
-			"%s?artist=%s&song=%s&fmt=realjson",
+			"%s?func=getSong&artist=%s&song=%s&fmt=realjson",
 			$this->apiUrl, urlencode($artist), urlencode($title)
 		);
 
